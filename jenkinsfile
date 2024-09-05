@@ -7,12 +7,14 @@ pipeline {
         pollSCM('* * * * *')
     }
     tools {
-        dotnet sdk 'dotnet8'
+        dotnetsdk 'dotnet8'
     }
     stages {
         stage ('SCM') {
+            steps {
             git url: 'https://github.com/Tejadeepc/nopCommerceaug16.git',
             branch: 'develop'
+            }
         }
         stage ('Build') {
             steps {
