@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'dotnet8'}
     options {
-        timeout(time: 1, unit: TimeUnit.HOURS)
+        timeout(time: 1, unit: 'HOURS')
     }
     triggers {
         pollSCM('* * * * *')
