@@ -18,9 +18,9 @@ pipeline {
         }
         stage ('Build') {
             steps {
-                sh 'dotnet build -c Release src/Presentation/Nop.Web/Nop.Web.csproj'
+                sh '/usr/bin/dotnet build -c Release src/Presentation/Nop.Web/Nop.Web.csproj'
                 sh 'mkdir published'
-                sh 'dotnet publish -o ./published -c src/Presentation/Nop.Web/Nop.Web.csproj'
+                sh '/usr/bin/dotnet publish -o ./published -c src/Presentation/Nop.Web/Nop.Web.csproj'
             }
             post {
                 success {
