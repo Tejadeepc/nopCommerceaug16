@@ -18,8 +18,8 @@ pipeline {
         }
         stage ('Build') {
             steps {
-                sh 'dotnet build -c Releasesrc/Presentation/Nop.Web/Nop.Web.csproj'               
-                sh 'mkdir published && dotnet publish -o ./published -c Releasesrc/Presentation/Nop.Web/Nop.Web.csproj'
+                sh 'dotnet build -c /home/ubuntu/nopCommerceaug16/src/Presentation/Nop.Web/Nop.Web.csproj'               
+                sh 'dotnet publish -o ./published -c /home/ubuntu/nopCommerceaug16/src/Presentation/Nop.Web/Nop.Web.csproj'
             }
             post {
                 success {
